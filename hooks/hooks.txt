@@ -1,0 +1,17 @@
+hooks do not work in:-
+1. function other than react function components
+2. top-level if statement
+
+hooks work only in the top-level of react function component 
+
+useTransition:-
+give high priority and low priority to states 
+hight priority states render first and low priority states which need more time to compute render after than high priority states
+
+
+useDeferredValue:-
+kinda like useTransition but here we don't always have to set state it's just for deferring value (Debounce And Throttle)
+
+useLayoutEffect:-
+the only and main difference between useEffect and useLayoutEffect is useLayoutEffect is always sync but useEffect is not
+
