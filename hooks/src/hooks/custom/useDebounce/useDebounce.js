@@ -1,10 +1,33 @@
-import { useEffect } from "react";
-import useTimeout from "../useTimeOut/useTimeout";
+import { useCallback, useEffect, useRef } from "react";
 
-const useDebounce = (cb, delay, dependencies) => {
-  const { clear, reset } = useTimeout(cb, delay);
+export default function useDebounce(callback, delay, dependencies) {
+  const callbackRef = useRef(callback);
+  const timeoutRef = useRef();
+
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+
+  const set = useCallback(() => {
+    timeoutRef.current = setTimeout(() => callbackRef.current(), delay);
+  }, [delay]);
+
+  const clear = useCallback(() => {
+    timeoutRef.current && clearTimeout(timeoutRef.current);
+  }, []);
+
+  const reset = useCallback(() => {
+    clear();
+    set();
+  }, [clear, set]);
+
+  useEffect(() => {
+    set();
+    return clear;
+  }, [delay, set, clear]);
+
   useEffect(reset, [...dependencies, reset]);
-  useEffect(clear, []);
-};
+  useEffect(clear, [clear]);
 
-export default useDebounce;
+  return { reset, clear };
+}

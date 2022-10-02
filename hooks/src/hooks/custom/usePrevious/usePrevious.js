@@ -1,14 +1,13 @@
-import { useRef } from "react";
+import { useRef } from "react"
 
-const usePrevious = (state) => {
-  const current = useRef(state);
-  const previousCount = useRef();
+export default function usePrevious(value) {
+  const currentRef = useRef(value)
+  const previousRef = useRef()
 
-  if (current.current !== state) {
-    previousCount.current = current.current;
-    current.current = state;
+  if (currentRef.current !== value) {
+    previousRef.current = currentRef.current
+    currentRef.current = value
   }
-  return previousCount.current;
-};
 
-export default usePrevious;
+  return previousRef.current
+}
