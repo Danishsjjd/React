@@ -1,13 +1,20 @@
-import Calculator from "./components/temperature/Calculator";
-import Products from "./components/thinkingInReact/Products";
+import Calculator from "./components/temperature/Calculator"
+import Products from "./components/thinkingInReact/Products"
+import TicTacToe from "./components/TicTacToe"
+import "./style.css"
 
 const App = () => {
   return (
     <>
       <Calculator />
+      <br />
+      <br />
       <Products />
+      <br />
+      <br />
+      <TicTacToe />
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
