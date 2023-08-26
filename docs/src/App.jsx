@@ -1,6 +1,7 @@
+import TicTacToe from "./components/TicTacToe"
 import Calculator from "./components/temperature/Calculator"
 import Products from "./components/thinkingInReact/Products"
-import TicTacToe from "./components/TicTacToe"
+
 import "./style.css"
 
 const App = () => {

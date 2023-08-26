@@ -1,11 +1,11 @@
-import ArrayComponent from "./useArray/ArrayComponent";
-import CopyToClipboardComponent from "./useCopyToClipboard/CopyToClipboardComponent";
-import DarkModeComponent from "./useDarkMode/DarkModeComponent";
-import DebounceComponent from "./useDebounce/DebounceComponent";
-import OnlineStatusComponent from "./useOnlineStatus/OnlineStatusComponent";
-import PreviousComponent from "./usePrevious/PreviousComponent";
-import StateWithHistoryComponent from "./useStateWithHistory/StateWithHistoryComponent";
-import StorageComponent from "./useStorage/StorageComponent";
+import ArrayComponent from "./useArray/ArrayComponent"
+import CopyToClipboardComponent from "./useCopyToClipboard/CopyToClipboardComponent"
+import DarkModeComponent from "./useDarkMode/DarkModeComponent"
+import DebounceComponent from "./useDebounce/DebounceComponent"
+import OnlineStatusComponent from "./useOnlineStatus/OnlineStatusComponent"
+import PreviousComponent from "./usePrevious/PreviousComponent"
+import StateWithHistoryComponent from "./useStateWithHistory/StateWithHistoryComponent"
+import StorageComponent from "./useStorage/StorageComponent"
 
 function CustomHooks() {
   return (
@@ -34,7 +34,7 @@ function CustomHooks() {
       <h2>useOnline</h2>
       <OnlineStatusComponent />
     </>
-  );
+  )
 }
 
-export default CustomHooks;
+export default CustomHooks

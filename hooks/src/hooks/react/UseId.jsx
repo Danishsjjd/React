@@ -1,6 +1,7 @@
-import React from "react";
+import React from "react"
+
 // see input component
-import Input from "../../components/Input";
+import Input from "../../components/Input"
 
 const UseId = () => {
   return (
@@ -8,7 +9,7 @@ const UseId = () => {
       <Input />
       <Input />
     </div>
-  );
-};
+  )
+}
 
-export default UseId;
+export default UseId

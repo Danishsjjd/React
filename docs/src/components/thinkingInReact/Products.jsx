@@ -1,23 +1,17 @@
-import React from "react";
+import React from "react"
+import { useState } from "react"
 
-import Table from "./Table";
-import { products } from "../../constants/data";
-import { useState } from "react";
-import ReactTable from "./ReactTable";
+import { products } from "../../constants/data"
+import ReactTable from "./ReactTable"
+import Table from "./Table"
 
 const Products = () => {
-  const [search, setSearch] = useState("");
-  const [checked, setChecked] = useState(false);
+  const [search, setSearch] = useState("")
+  const [checked, setChecked] = useState(false)
   return (
     <div>
       <div>
-        <input
-          type="text"
-          name="search"
-          id="search"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <input type="text" name="search" id="search" value={search} onChange={(e) => setSearch(e.target.value)} />
       </div>
       <div>
         <input
@@ -34,7 +28,7 @@ const Products = () => {
       <div style={{ margin: "40px 0" }} />
       <ReactTable products={products} search={search} checked={checked} />
     </div>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

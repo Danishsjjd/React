@@ -1,7 +1,10 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 
+import CustomHooks from "./hooks/custom/CustomHooks"
+
 import MemoTest from "./components/MemoTest"
+
 import {
   UseContext,
   UseDeferredValue,
@@ -14,7 +17,6 @@ import {
   UseState,
   UseTransition,
 } from "./hooks"
-import CustomHooks from "./hooks/custom/CustomHooks"
 import "./style.css"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))

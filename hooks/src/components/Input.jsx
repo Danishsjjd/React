@@ -1,15 +1,15 @@
-import React, { useImperativeHandle, useRef, useId } from "react";
+import React, { useId, useImperativeHandle, useRef } from "react"
 
 const Input = ({ value, onChange }, ref) => {
-  const id = useId();
-  const input = useRef(null);
+  const id = useId()
+  const input = useRef(null)
   useImperativeHandle(
     ref,
     () => ({
       alertHi: () => input.current.focus(),
     }),
     []
-  );
+  )
   return (
     <>
       <label htmlFor={id}>Email:</label>
@@ -32,7 +32,7 @@ const Input = ({ value, onChange }, ref) => {
         }}
       />
     </>
-  );
-};
+  )
+}
 
-export default React.forwardRef(Input);
+export default React.forwardRef(Input)

@@ -1,11 +1,11 @@
-import React from "react";
-import { useRef } from "react";
-import { useImperativeHandle } from "react";
+import React from "react"
+import { useRef } from "react"
+import { useImperativeHandle } from "react"
 
 const Model = ({ isOpen, onClose }, ref) => {
-  const yes = useRef(null);
-  const no = useRef(null);
-  const close = useRef(null);
+  const yes = useRef(null)
+  const no = useRef(null)
+  const close = useRef(null)
 
   useImperativeHandle(
     ref,
@@ -15,7 +15,7 @@ const Model = ({ isOpen, onClose }, ref) => {
       focusClose: () => close.current.focus(),
     }),
     []
-  );
+  )
 
   return (
     <dialog ref={ref} open={isOpen}>
@@ -31,7 +31,7 @@ const Model = ({ isOpen, onClose }, ref) => {
         Close
       </button>
     </dialog>
-  );
-};
+  )
+}
 
-export default React.forwardRef(Model);
+export default React.forwardRef(Model)

@@ -1,8 +1,8 @@
-import useDarkMode from "./useDarkMode";
-import "./body.css";
+import "./body.css"
+import useDarkMode from "./useDarkMode"
 
 export default function DarkModeComponent() {
-  const [darkMode, setDarkMode] = useDarkMode();
+  const [darkMode, setDarkMode] = useDarkMode()
 
   return (
     <div style={{ border: "3px solid black" }}>
@@ -17,5 +17,5 @@ export default function DarkModeComponent() {
         Toggle Dark Mode
       </button>
     </div>
-  );
+  )
 }

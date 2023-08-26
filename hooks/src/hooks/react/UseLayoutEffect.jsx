@@ -1,20 +1,20 @@
-import { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
 const UseLayoutEffect = () => {
-  const [show, setShow] = useState(false);
-  const [show2, setShow2] = useState(false);
-  const button = useRef();
-  const popup = useRef();
+  const [show, setShow] = useState(false)
+  const [show2, setShow2] = useState(false)
+  const button = useRef()
+  const popup = useRef()
 
   useLayoutEffect(() => {
-    setShow2(show);
-  }, [show]);
+    setShow2(show)
+  }, [show])
 
   useEffect(() => {
-    if (button.current == null || popup.current == null) return;
+    if (button.current == null || popup.current == null) return
     // const { bottom } = button.current.getBoundingClientRect();
-    popup.current.style.top = `100px`;
-  }, [show2]);
+    popup.current.style.top = `100px`
+  }, [show2])
 
   return (
     <div style={{ position: "relative", border: "3px solid black" }}>
@@ -27,7 +27,7 @@ const UseLayoutEffect = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default UseLayoutEffect;
+export default UseLayoutEffect
