@@ -1,7 +1,7 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from "react"
+import ReactDOM from "react-dom/client"
 
-import MemoTest from "./components/MemoTest";
+import MemoTest from "./components/MemoTest"
 import {
   UseContext,
   UseDeferredValue,
@@ -13,11 +13,11 @@ import {
   UseRef,
   UseState,
   UseTransition,
-} from "./hooks";
-import CustomHooks from "./hooks/custom/CustomHooks";
-import "./style.css";
+} from "./hooks"
+import CustomHooks from "./hooks/custom/CustomHooks"
+import "./style.css"
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <>
@@ -63,4 +63,4 @@ root.render(
       <CustomHooks />
     </>
   </React.StrictMode>
-);
+)
