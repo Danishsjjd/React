@@ -11,6 +11,7 @@
     "vite": "^4.4.9"
   },
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "build": "vite build"
   }
 }
